@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+
+
+{% endblock %}
+
+
+{% block contenido %}
+<html>
+<head>
+  <style>
+    h1 {color: rgb(25, 0, 255);}
+    h1 { font-size:50px; }
+  </style>
+</head> 
+
+<div> 
+    <br><br>
+    <h1><center>Más Mascotas proximamente</center><h1>
+    <br><br>
+</div>
+
+<body>
+    <div class="infodelamascota">
+        <br>
+        <h3>...<h3>
+    </div>
+</body>
+{% endblock %}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HowTo-Pet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,600&display=swap" rel="stylesheet">
+    {% load static %}
+    {% block css %}
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'app/css/estilos.css' %}" type="text/css">
+    
+</head>
+
+<body>
+
+    
+    <header id="header">
+        <img class="menu" src="{% static 'app/img/menuiconwhite.png' %}" alt="menu" id="menu">
+        <div class="contenedor_logo">
+            <img  class="logo"  src="{% static 'app/img/logo_trans.png' %}" alt="logo">
+        </div>
+
+        <div>
+            
+            <nav id="nav">
+                <ul>
+                    <li>
+                        <a href="{% url 'home' %}"> Inicio </a></li>
+                    <li>
+                        <a href="{% url 'galeria' %}">usuario</a></li>
+
+                    {% if user.is_authenticated %}
+                    <li>
+                        <a href="{% url 'logout' %}">Logout</a>
+                    </li>  
+                    <li>
+                        <a href="#">{{ user.username}} </a>
+                    </li>
+                    {% else %}
+                    <li>
+                        <a href="{% url 'login' %}">Login</a>
+                    </li>
+                    {% endif %}
+            
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
+    <div id="contenido">
+
+        {% block contenido %}
+        {% endblock %}
+
+    </div>
+
+
+    <footer>
+        <div class="marcas">
+            <a href="https://www.purina-latam.com"><img src="{% static 'app/img/dogchow.png' %}"  width="70" height="70"  alt="dog chow"><a>
+            <a href="https://www.whiskas.cl"><img src="{% static 'app/img/Whiskas.png' %}"  width="90" height="70" alt="WHISKAS">
+            <a href="https://www.pedigree.cl"><img src="{% static 'app/img/Pedigree.png' %}" width="90" height="70" alt="pedigree">
+            <a href="https://www.championdog.cl"><img src="{% static 'app/img/ChampionDog.png' %}" width="80" height="70" alt="champion dog">
+            <a href="https://www.royalcanin.com/cl"><img src="{% static 'app/img/royalcanin3.png' %}" width="90" height="70" alt="royal canin">
+        </div>
+        <div class="logo_footer">
+            <img src="{% static 'app/img/logo_trans.png' %}" alt="logo">
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+   
+    <script src="{% static 'app/js/menu.js' %}"></script>
+
+
+{% block js %}
+{% endblock %}
+</body>
+</html>

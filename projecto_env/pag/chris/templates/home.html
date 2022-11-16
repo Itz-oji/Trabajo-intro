@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block js %}
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<script>
+    $(document).ready(function() {
+      $('.slider').bxSlider({
+          mode: 'fade',//horizontal, vertical, fade
+          auto: true,
+          pause: 2000
+      });
+    });
+</script>
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+
+
+{% endblock %}
+
+
+{% block contenido %}
+{% if user.is_authenticated %}
+<div class="slider">
+    <div>
+        <img src="app/img/banner/banner1.png" alt="oferta 1">
+    </div>
+    <div>
+        <img src="app/img/banner/banner2.png" alt="oferta 2">
+    </div>
+    <div>
+        <img src="app/img/banner/banner3.png" alt="oferta 3">
+    </div>
+</div>
+{% endif %}
+<div class ='informacion'> 
+    <h1>Si quieres saber como cuidar a tu mascota esta pagina es para ti</h1> 
+    <br>
+    <h0>Cuando tienes o deseas tener un mascota, siempre queremos  
+        buscar la mejor forma de cuidar a nuestra mascotas mientras estas crecen, es por eso
+        que HOW TO-PET llego para solucionar tus problemas, esta pagina
+        te ayudara proporcionandote información para cuidar de la mejor forma a tu mascota, e informarse sobre cual quieres.mación de porque elegirlo
+    </h0>
+</div>
+<br><br>
+{% if user.is_authenticated %}
+<h2> Favoritos  </h2>
+{% endif %}
+<br><br>
+   
+    <h2>Mascotas mas populares</h2>
+<br>
+  
+<div class="productos">
+
+<div class="producto">
+
+    <div class="contenedor_producto">
+
+        <a href="{% url 'perropag' %}"> <img src="{% static 'app/img/perro.png' %}" /> </a>
+        <div class="detalle">
+            <h5></h5>
+            <h2>Perro</h2>
+            <h3></h3>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="producto">
+
+    <div class="contenedor_producto">
+
+        <a href="{% url 'gato' %}"> <img src="{% static 'app/img/gato.png' %}" /> </a>
+        <div class="detalle">
+            <h1></h1>
+            <h2>Gato</h2>
+            <h3></h3>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="producto">
+
+    <div class="contenedor_producto">
+
+        <a href="{% url 'mascota1pag' %}"> <img src="{% static '' %}" /> </a>
+        <div class="detalle">
+            <h5></h5>
+            <h2>rroximamente...</h2>
+            <h3></h3>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="producto">
+
+    <div class="contenedor_producto">
+
+        <a href="{% url 'mascota2pag' %}"> <img src="{% static 'app/img/gatito.jpg' %}" /> </a>
+        <div class="detalle">
+            <h5r</h5>
+            <h2>Proximamente...</h2>
+            <h3></h3>
+        </div>
+
+    </div>
+</div>
+
+ 
+</div>
+<br><br>
+{% if not user.is_authenticated %}
+<h0 style=" color: red;"> Te recomendamos iniciar sesion para poder guardar tu informacion </h0>
+{% endif %}
+<div class="producto">
+
+
+
+</div>
+
+
+</div>
+
+
+{% endblock %}

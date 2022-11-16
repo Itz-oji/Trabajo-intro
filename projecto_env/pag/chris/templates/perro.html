@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+
+
+{% endblock %}
+
+
+{% block contenido %}
+<html>
+<head>
+  <style>
+    h1 {color: rgb(25, 0, 255);}
+    h1 { font-size:50px; }
+  </style>
+</head> 
+
+<div> 
+    <br><br>
+    <h1><center>Perros</center><h1>
+    <br><br>
+</div>
+
+<div class="fotos">
+    <img src="{% static 'app/img/perro.png' %}" alt="perro" width="400" height="300"  />
+    <img src="" alt="perrodos" width="400" height="300"/>
+    <img src="" alt="perrotres" width="400" height="300"/>
+</div>
+<body>
+    
+    <br>
+    <h2>¿Por qué tener un perro de mascota?<h2>
+    <br>
+    <h4>Reduce la presión arterial alta, los niveles de colesterol, te hace más sociable, mejora el estado de ánimo y al contrario de los gatos es muy dependiente a ti.<h4>
+    <br>
+    <h2>¿Como cuidar un perro?</h2>
+    <br>
+    <h4>-Los perros son muy curiosos por lo que debes quitar todo lo peligroso de su alcance.
+      <br><br>
+      -Al igual que todos los animales se recomienda hablar con sus veterinarios para que les indiquen cuál es la comida indicada para su mascota, recordar que todos los perros son distintos.
+      <br><br>
+      -Como ya lo indicamos los perros son animales muy curiosos, por esto pueden perderse, se les recomienda colocarle microchips o chapa de identificación.
+      <br><br>
+      -Debes llevarlo al veterinario mínimo una vez al año, asegurarse que está sano, tener sus antiparasitos al día y se recomienda esterilizar, ya que evita enfermedades y evita tener cachorros en la calle.
+      <br><br>
+      -Llevarlo a pasear es uno de las cosas mas importante ya que aporta al perro, la energia que puede llegar a tener es demasiada, por lo que un buen paseo lo dejaria agotado, aparte de ayudar a su salud, recordar llevar agua para hidratarlo.
+      <br><br>
+    </h4>
+
+</body>
+{% endblock %}

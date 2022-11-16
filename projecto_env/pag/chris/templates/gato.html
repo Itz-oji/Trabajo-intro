@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+
+
+{% endblock %}
+
+
+{% block contenido %}
+<html>
+<head>
+  <style>
+    h1 {color: rgb(25, 0, 255);}
+    h1 { font-size:50px; }
+
+  </style>
+</head>  
+<div> 
+  <br><br>
+  <h1><center>Gatos</center><h1>
+  <br><br>
+</div>
+
+<div class="foto">
+
+    <img src="{% static 'app/img/gato.png' %}" alt= "fotogatouno" width="360" height="260">
+    <img src="" alt= "fotogatouno" width="360" height="260">
+    <img src="" alt= "fotogatoouno" width="360" height="260"> 
+    <br>  
+</div>
+<body>
+    <br>
+    <h2>¿Por qué tener un gato de mascota? <h2>
+    <br>
+    <h3>Se ha comprobado que tener un gato reduce el estrés, son buenos compañeros para quienes están tristes o deprimidos además de ser cariñosos y lo más importante es que son independientes</h3>
+    <br>
+    <h2>¿Como cuidar un gato? <h2>
+    <br>
+    <h4>-Unas de las cosas más relevantes para los gatos es la higiene por lo que hablaremos de la arena, esta debe estar en un lugar donde no se le moleste al gato, un lugar no muy transitado, es recomendable no cambiar de marca la arena, ya que el gato se acostumbra a esta y es probable que no la reconozca o le disguste, debes limpiar la arena seguida y cambiarla una vez por semana mínimo.
+    <br>
+    <br>
+    -Visita al veterinario al menos una vez al año, desparasita a tu gato, se recomienda que se esterilicen, ya que al estar esterilizados están más tranquilos, evitan enfermedades y aumenta su esperanza de vida.
+    <br>
+    <br>
+      -Con respecto a la alimentación, aquí debes consultar a tu veterinario, ya que cada gato tiene su propio peso y necesidad nutricional, debes comprar una buena marca, ya que así te aseguras de que tu mascota estará saludable.
+    </h4>
+    <br>
+    
+</body>
+{% endblock %}

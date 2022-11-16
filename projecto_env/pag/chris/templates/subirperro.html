@@ -1,0 +1,61 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+
+{% block contenido %}
+
+<h2>Crea tu sesion</h2>
+<form action="" class="formulario_contacto" id="formulario_contacto">
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" name="nombre">
+    <br>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="tu@email.cl">
+    <br>
+    <label for="telefono">Contraseña</label>
+    <br>    
+    <input type="password" name="Contraseña" id="Contraseña">
+    <br>
+    <label for="tipoconsulta">Tipo de mascota</label>
+    <select name="tipoconsulta" id="tipoconsulta">
+        <option value="">Seleccionar</option>
+        <option value="Perro">Perro</option>
+        <option value="Gato">Gato</option>
+        <option value="Mascota 1">Mascota 1</option>
+        <option value="Mascota 2">Mascota 2</option>
+    </select>
+    <br>
+    <input type="checkbox" name="avisos" id="avisos" checked>
+    <label for="avisos"></label>
+    <br>
+    
+    <!--
+    
+    <label for="">Sexo</label>
+    <label for="masculino">Masculino</label>
+    <input type="radio" name="sexo" id="masculino" checked>
+    <label for="femenino">Femenino</label>
+    <input type="radio" name="sexo" id="femenino">
+
+    <br>
+    
+    <label for="fechanacimiento">Fecha nacimiento</label>
+    <input type="date" name="fechanacimiento" id="fechanacimiento">
+    <br>
+    <label for="color">Color</label>
+    <input type="color" name="color" id="color">
+    
+    <br>
+    <input type="datetime-local" name="" id="">-->
+
+    <button type="submit" id="btnEnviar" class="button">Crear sesion</button>
+    <br>
+    <br>
+    <h2></h2>
+
+</form>
+
+{% endblock %} 
+
